@@ -1,0 +1,177 @@
+﻿@model RegistrationModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Burger House</title>
+</head>
+<body>
+    <a href="#" id="toTop">UP</a>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <img src="img/logo.png" alt="burger picture" class="logo">
+                <a class="phone-number" href="+1 234 567 890">
+                    Express Delivery +1 234 567 890
+                </a>
+
+                <img src="img/moped.png" alt="moped" class="moped">
+                <ul class="menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#menu-page">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#history-page">Our Story</a>
+                    </li>
+                    <li style="margin-right: 0;">
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="home-text">
+                <div class="ramka">
+                    <p class="text-inside">It is a good time for the great taste of burgers</p>
+                </div>
+                <img src="img/title.png" alt="burger week" class="burger">
+            </div>
+            <img src="img/burger-menu.png" alt="burger mit cola" class="menu-picture">
+        </div>
+    </header>
+    <div class="menu-page" id="menu-page">
+        <div class="container-menu">
+            <div class="first-burger">
+                <p class="try-it-text">Try it today</p>
+                <p class="first-burger-text">Most popular burger</p>
+                <img src="img/bigtasty.png" alt="big-tasty" class="big-tasty">
+            </div>
+            <div class="second-burger">
+                <p class="try-it-text" style="float: left;margin-left: 777px;margin-top: -320px;">Try it today</p>
+                <p class="first-burger-text" style="float: left;margin-left: 777px;margin-top: -290px;">More fun<br>More taste</p>
+                <img src="img/second-burger.png" alt="two burgers" class="two-burgers">
+            </div>
+            <div class="third-burger">
+                <p class="try-it-text" style="float: left;margin-left: 777px;margin-top: -290px;">Try it today</p>
+                <p class="first-burger-text" style="float: left;margin-left: 777px;margin-top: -260px;">Fresh & Chill</p>
+                <img src="img/third-burger.png" alt="one burger" class="one-burger">
+            </div>
+        </div>
+    </div>
+    <div class="oder-page">
+        <div class="container-oder">
+            <div class="table">
+                <p class="table-text">Always tasty burgers</p>
+            </div>
+            <div class="title-oder">
+                <p class="title-oder-text">CHOOSE & ENJOY</p>
+                <p class="subtitle-oder-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Quis ipsum suspendisse ultrices gravida.
+                    Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                </p>
+            </div>
+            <div class="oder-nav">
+                <ul class="oder-menu">
+                    <li style="margin-left: 25px;">
+                        <img src="img/bulka1.png" alt="burger" style="margin-top: 35px;">
+                        <p class="title-menu">Lorem ipsum dolor</p>
+                        <p class="description-text">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit, sed do</p>
+                        <button class="oder-button">ODER NOW</button>
+                    </li>
+                    <li>
+                        <img src="img/bulka2.png" alt="burger">
+                        <p class="title-menu">Lorem ipsum dolor</p>
+                        <p class="description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                        <button class="oder-button">ODER NOW</button>
+                    </li>
+                    <li>
+                        <img src="img/bulka1.png" alt="burger" style="margin-top: 35px;">
+                        <p class="title-menu">Lorem ipsum dolor</p>
+                        <p class="description-text">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit, sed do</p>
+                        <button class="oder-button">ODER NOW</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="history-page" id="history-page">
+        <div class="history-container">
+            <div class="history-page-text">
+                <p class="history-page-title">Discover</p>
+                <p class="history-page-subtitle">UPCOMING EVENTS</p>
+                <p class="history-page-other-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Quis ipsum suspendisse ultrices gravida.
+                    Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                </p>
+            </div>
+            <img src="img/burger-with-potato.png" alt="burger with potato" class="burger-with-potato-picture">
+        </div>
+    </div>
+    <div class="reservation-page">
+        <div class="reservation-container">
+            <p class="reservation-title">Reservation</p>
+            <p class="reservation-subtitle">BOOK YOUR TABLE</p>
+            <form asp-controller="home" asp-action="Index" method="post">
+                <div class="input-fields">
+                    <ul>
+                        <li>
+                            <input placeholder="Name" asp-for="userName">
+                            <input placeholder="E-mail" asp-for="userEmail">
+                        </li>
+                        <li>
+                            <input placeholder="Date" asp-for="userDate">
+                            <input placeholder="Time" asp-for="userTime">
+                        </li>
+                        <li>
+                            <input placeholder="People" asp-for="peopleValue">
+                            <button type="submit">FIND A TABLE</button>
+                        </li>
+                    </ul>
+                    <span asp-validation-for="userName" class="text-danger"></span><br />
+                    <span asp-validation-for="userEmail"></span><br />
+                    <span asp-validation-for="userDate"></span><br />
+                    <span asp-validation-for="userTime"></span><br />
+                    <span asp-validation-for="peopleValue"></span><br />
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="footer" id="contact">
+        <img src="img/footer-logo.png" alt="logo" class="footer-logo">
+        <p class="footer-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Quis ipsum suspendisse ultrices gravida.
+            Risus commodo viver ra maecenas accumsan lacus vel facilisis.
+        </p>
+        <div class="adress">
+            <ul class="address-table">
+                <li>
+                    <img src="img/location-icon.png" alt="locaton icon">
+                    <p class="location-text">Main Road, Building Name, Country</p>
+                </li>
+                <li>
+                    <img src="img/e-mail-icon.png" alt="e-mail icon">
+                    <p class="email-text">info@companyname.com</p>
+                </li>
+            </ul>
+        </div>
+        <ul class="social-media-menu">
+            <li>
+                <img src="img/instagram-icon.png" alt="instagram icon">
+                <img src="img/facebook-icon.png" alt="facebook icon">
+                <img src="img/twitter-icon.png" alt="twitter icon">
+                <img src="img/whatsapp-icon.png" alt="whatsapp icon">
+            </li>
+        </ul>
+        <p class="copyriting">
+            © Company Name 2020. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
